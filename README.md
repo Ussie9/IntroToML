@@ -1,1 +1,3 @@
+This project demonstrates a simple model that uses machine learning to predict house prices at a certain demographic area. In simple terms, it collects data (house size & house price) from the user and with the help of Linear Regression, trains itself to produce the relationship between the two inputs. Lastly, it asks the users for desired house size and estimates the price of the house. 
 
+The model can be deployed on any machine that uses python, clone the project from github into your machine. Once cloned, make sure to install all the requirements from requirements.txt. Make sure to also activate the environment as it might be stripped from the project. Run the code and follow the instructions required from the user.

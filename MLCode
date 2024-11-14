@@ -1,0 +1,21 @@
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+house_size = np.array([[0]])
+house_price = np.array([0])
+
+print("You need to enter data for three houses to train the model.")
+for i in range(3):
+    size = float(input(f"Enter area of house{i + 1}: "))
+    conv_size = np.array([[size]])
+    house_size = np.append(house_size,conv_size,axis=0)
+
+    price = float(input(f"Enter price of house{i + 1}: "))
+    house_price = np.append(house_price,price)
+
+model = LinearRegression()
+model.fit(house_size, house_price)
+
+house_area = float(input("Enter area of target house: "))
+predicted_price = model.predict([[house_area]])
+print(f"The predicted price of a house with {house_area} m^2 is: R{int(predicted_price[0])} 000")
